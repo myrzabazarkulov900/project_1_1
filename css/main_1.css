@@ -1,0 +1,337 @@
+header {
+    width: 100%;
+    height: 700px;
+    background: beige;
+    z-index: 1;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    margin: 0 200px 0 0;
+    z-index: 2;
+}
+
+nav {
+    height: 90px;
+    width: 100%;
+    background: #ffa033;
+    position: fixed;
+    z-index: 2;
+}
+
+.nav_item {
+    margin: 0 70px 0 0;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .4s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav_item:hover {
+    border-bottom: 2px solid black;
+}
+
+.header_top {
+    right: 100px;
+    position: fixed;
+    top: 40px;
+    display: flex;
+}
+
+.logo_a {
+    color: black;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    left: 100px;
+    top: 25px;
+    transition: all .3s;
+}
+
+.white_sss {
+    color: white;
+}
+
+input#burger {
+    display: none;
+}
+
+@media(max-width:920px) {
+    .content_txt {
+        z-index: -1;
+    }
+    .header_top {
+        flex: none;
+        display: block;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        background: #ffa033;
+        position: fixed;
+        justify-content: center;
+        top: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s;
+    }
+    .nav_item {
+        flex: none;
+        display: block;
+        color: black;
+        right: 0;
+        padding: 5px;
+        margin: 100px 0px;
+        position: relative;
+        top: 60px;
+        border-bottom: 1px solid transparent;
+        z-index: 2;
+        transition: all .3s;
+    }
+    .nav_item:hover {
+        border-bottom: 1px solid transparent;
+        color: white;
+    }
+    #burger:checked~.header_top {
+        max-height: 100%;
+        font-size: 100%;
+    }
+    label {
+        background: transparent;
+        height: 45px;
+        width: 50px;
+        position: absolute;
+        top: 20px;
+        right: 100px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    #burger:checked~.second {
+        transform: rotate(45deg)
+    }
+    #burger:checked~.third {
+        transform: rotate(-45deg)
+    }
+    #burger:checked~.first {
+        display: none;
+    }
+    #burger:checked~.fourth {
+        display: none;
+    }
+    .line {
+        height: 3px;
+        width: 50px;
+        background: white;
+        position: absolute;
+        right: 100px;
+        top: 30px;
+        transition: all .3s;
+        z-index: 2;
+    }
+    .second {
+        top: 40px;
+    }
+    .third {
+        top: 40px;
+    }
+    .fourth {
+        top: 50px;
+    }
+    .logo_a {
+        z-index: 3;
+    }
+}
+
+@media (max-width:500px) {
+    .content_txt {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width:530px) {
+    .logo_a {
+        left: 40px;
+        z-index: 3;
+    }
+    label {
+        right: 40px;
+    }
+    .line {
+        right: 40px;
+    }
+}
+
+@media (max-height:570px) {
+    .nav_item {
+        margin: 80px 0;
+    }
+}
+
+.content_txt {
+    position: relative;
+    top: 300px;
+    font-family: Arial;
+    line-height: 30px;
+    color: darkslategrey;
+    z-index: 1;
+}
+
+.div_cntnt_bttn {
+    position: relative;
+    top: 370px;
+    z-index: 1;
+}
+
+.content_bttn {
+    background: #ffa033;
+    color: black;
+    font-family: Arial;
+    padding: 15px 40px;
+    border: 1px solid transparent;
+    transition: all .3s;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.content_bttn:hover {
+    border: 1px solid black;
+    background: transparent;
+    z-index: 1;
+}
+
+.container_2 {
+    width: 100%;
+    height: 700px;
+}
+
+.title_about_us {
+    position: relative;
+    font-size: 18px;
+    padding: 20px 0;
+    font-family: Arial;
+    color: black;
+    font-weight: lighter;
+}
+
+.under_title_about_us {
+    font-family: Arial;
+    line-height: 20px;
+    color: darkslategrey;
+}
+
+.flex_container_1_about_us {
+    display: flex;
+    justify-content: center;
+}
+
+.flex_1_item_about_us,
+.flex_2_item_about_us,
+.flex_3_item_about_us {
+    background: darkgray;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+.flex_container_2_about_us {
+    display: flex;
+    justify-content: center;
+}
+
+.flex_4_item_about_us,
+.flex_5_item_about_us,
+.flex_6_item_about_us {
+    background: darkgray;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+._flex_item_1_our_product,
+._flex_item_2_our_product,
+._flex_item_3_our_product {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background: darkgray;
+}
+
+.flex_cntnr_of_our_product {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:720px) {
+    .under_title_about_us {
+        margin: 0 23px;
+    }
+    .flex_container_1_about_us {
+        display: block;
+    }
+    .flex_container_2_about_us {
+        display: block;
+    }
+    .flex_1_item_about_us,
+    .flex_2_item_about_us,
+    .flex_3_item_about_us,
+    .flex_4_item_about_us,
+    .flex_5_item_about_us,
+    .flex_6_item_about_us {
+        width: 80%;
+        height: 300px;
+    }
+    .container_2 {
+        height: 2150px;
+    }
+    .flex_cntnr_of_our_product{
+        display: block;
+    }
+    ._flex_item_1_our_product,
+._flex_item_2_our_product,
+    ._flex_item_3_our_product{
+        height: 300px;
+        width: 80%;
+    }
+    .container_3{
+        height:1180px;
+    }
+
+}
+
+._bttn_more_of_about_us {
+    background: #ffa033;
+    color: black;
+    font-family: Arial;
+    padding: 15px 40px;
+    border: 1px solid transparent;
+    transition: all .3s;
+    font-size: 20px;
+    z-index: 1;
+    position: relative;
+    top: 20px;
+}
+
+._bttn_more_of_about_us:hover {
+    border: 1px solid black;
+    background: transparent;
+}
+
+.container_3 {
+    width: 100%;
+    background: beige;
+}
+
+.title_about_our_product {
+    position: relative;
+    font-size: 18px;
+    padding: 20px 0;
+    font-family: Arial;
+    color: black;
+    font-weight: lighter;
+}
+
+.under_title_about_our_product {
+    font-family: Arial;
+    line-height: 20px;
+    color: darkslategrey;
+}
